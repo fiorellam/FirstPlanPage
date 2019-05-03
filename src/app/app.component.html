@@ -1,24 +1,3 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
-<router-outlet></router-outlet> -->
 <!-- Page Wrapper -->
 <div id="page-wrapper">
 
@@ -101,7 +80,7 @@
       </section>
 
     <!-- Three -->
-      <section id="three" class="wrapper style3 special">
+      <section id="three" class="wrapper style3 special" *ngIf="careers && careers.length > 0 ">
         <div class="inner">
           <header class="major">
             <h2>Accumsan mus tortor nunc aliquet</h2>
@@ -109,11 +88,11 @@
             fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
           </header>
           <ul class="features">
-            <li class="icon fa-paper-plane-o">
-              <h3>Nanotecnología</h3>
+            <li class="icon fa-paper-plane-o" *ngFor="let career of careers, let index = index">
+              <h3>{{career.nombre}}</h3>
               <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
             </li>
-            <li class="icon fa-laptop">
+            <!-- <li class="icon fa-laptop">
               <h3>Arquitectura</h3>
               <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
             </li>
@@ -132,7 +111,7 @@
             <li class="icon fa-flag-o">
               <h3>Diseño</h3>
               <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-            </li>
+            </li> -->
           </ul>
         </div>
       </section>
@@ -189,6 +168,33 @@
           </div>
         </form>
       </section>
+
+      <!-- <table *ngIf="careers && careers.length > 0 ">
+        <thead>
+          <tr>
+            <th>Autor</th>
+            <th>Color</th>
+            <th>Descripcion</th>
+            <th>Id</th>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Texto</th>
+            <th>Video</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let career of careers, let index = index">
+            <td>{{career.autor}}</td>
+            <td>{{career.color}}</td>
+            <td>{{career.descripcion}}</td>
+            <td>{{career.id}}</td>
+            <td><img src="{{career.imagen}}" alt="" width="230" height="230"></td>
+            <td>{{career.nombre}}</td>
+            <td>{{career.texto}}</td>
+            <td><iframe width="560" height="315" [src]="career.videoUrl" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+          </tr>
+        </tbody>
+      </table> -->
     
 
     <!-- Footer -->
