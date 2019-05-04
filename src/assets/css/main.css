@@ -3971,7 +3971,7 @@ input, select, textarea {
 	}
 
 	body.is-mobile.landing #page-wrapper {
-		background: none;
+		background:red;
 	}
 
 	body.is-mobile.landing #banner,
@@ -3991,3 +3991,15 @@ input, select, textarea {
 	.form-email{
 		padding: 30px;
 	}
+	
+	#nav ul a{
+		margin-right: 50px;
+		border-bottom: 0;
+	}
+	#nav ul a:hover{
+		border-bottom: solid 1px #3f338b;
+		/* color: #3f338b */
+	}
+.azul{
+	background: #2e3842 !important;
+}

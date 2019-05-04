@@ -11,6 +11,7 @@
 		$wrapper = $('#page-wrapper'),
 		$banner = $('#banner'),
 		$header = $('#header');
+		$sectionOne = $('#one');
 
 	// Breakpoints.
 		breakpoints({
@@ -51,19 +52,30 @@
 			});
 
 	// Menu.
-		$('#menu')
-			.append('<a href="#menu" class="close"></a>')
-			.appendTo($body)
-			.panel({
-				delay: 500,
-				hideOnClick: true,
-				hideOnSwipe: true,
-				resetScroll: true,
-				resetForms: true,
-				side: 'right',
-				target: $body,
-				visibleClass: 'is-menu-visible'
+		// $('#menu')
+		// 	.append('<a href="#menu" class="close"></a>')
+		// 	.appendTo($body)
+		// 	.panel({
+		// 		delay: 500,
+		// 		hideOnClick: true,
+		// 		hideOnSwipe: true,
+		// 		resetScroll: true,
+		// 		resetForms: true,
+		// 		side: 'right',
+		// 		target: $body,
+		// 		visibleClass: 'is-menu-visible'
+		// 	});
+		$(function (){
+			$(window).scroll(function(){
+				if ($(this).scrollTop() > 700){
+					$('#header').addClass("azul");
+					$('#header').removeClass("alt");
+				}else{
+					$('#header').removeClass("azul");
+					$('#header').addClass("alt");
+				}
 			});
+		})
 
 	// Header.
 		if ($banner.length > 0
