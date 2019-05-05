@@ -3991,3 +3991,93 @@ input, select, textarea {
 	.form-email{
 		padding: 30px;
 	}
+	
+	#nav ul a{
+		padding-right: 50px;
+		border-bottom: 0;
+	}
+	#nav ul a:hover{
+		border-bottom: solid 1px #3f338b;
+		/* color: #3f338b */
+	}
+.azul{
+	background: #2e3842 ;
+}
+/* #header div > a{
+	background-image: url("../images/bars.svg");
+	background-position: right center;
+	background-repeat: no-repeat;
+	content: '';
+	display: inline-block;
+	height: 3.75em;
+	vertical-align: top;
+	width: 2em;
+} */
+.menu_barr{
+	display: none;
+}
+@media screen and (max-width: 736px) {
+
+	#header{
+		height: 100% !important;
+	}
+	#header nav > ul > li > a {
+		padding: 0 !important;
+	}
+	.header_nav_click{
+		width: 60%;
+		height: 100%;
+		margin: 0;
+		position: absolute !important;
+		right: 0 !important;
+		top: 43px !important;
+		background:  #3f338b !important;
+	}
+	.header_nav{
+		display: none;
+	}
+
+	header nav ul li{
+		display: block !important;
+		float: none !important;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		text-align: center;
+	}
+	header h1{
+		display: none;
+	}
+	.menu_barr .bt-menu{
+		padding: 20px !important;
+	}
+	.menu_barr2{
+		display: block !important;
+		margin-left: 40% !important;
+		width: 60% !important;
+		background: transparent !important;
+	}
+	.menu_barr_click{
+		display: block !important;
+		margin-left: 40%;
+		width: 60% !important;
+		background: #3f338b !important;
+	}
+	header img{
+		float: right ;
+		padding: 15px;
+	}
+	header div a{
+		border: 0;
+	}
+	.menu_barr span{
+		float: left !important;
+	}
+	.azul{
+		background: transparent !important;
+	}
+}
+.wrapper.style3 h3 {
+	color: black;
+}
+.wrapper.style3 {
+    color: black;
+}

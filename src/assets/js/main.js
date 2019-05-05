@@ -11,6 +11,7 @@
 		$wrapper = $('#page-wrapper'),
 		$banner = $('#banner'),
 		$header = $('#header');
+		$sectionOne = $('#one');
 
 	// Breakpoints.
 		breakpoints({
@@ -31,6 +32,7 @@
 	// Mobile?
 		if (browser.mobile)
 			$body.addClass('is-mobile');
+			
 		else {
 
 			breakpoints.on('>medium', function() {
@@ -51,19 +53,53 @@
 			});
 
 	// Menu.
-		$('#menu')
-			.append('<a href="#menu" class="close"></a>')
-			.appendTo($body)
-			.panel({
-				delay: 500,
-				hideOnClick: true,
-				hideOnSwipe: true,
-				resetScroll: true,
-				resetForms: true,
-				side: 'right',
-				target: $body,
-				visibleClass: 'is-menu-visible'
+	$(document).ready(main);
+
+	var contador = 1;
+
+	function main(){
+		$('#menu_barr_id').click(function (){
+			console.log("que tranzuki por tus venukis");
+			if(contador == 1){
+				$('nav').removeClass("header_nav");
+				$('nav').addClass("header_nav_click");
+				$('#menu_barr_id').removeClass("menu_barr2");
+				$('#menu_barr_id').addClass("menu_barr_click");
+				contador = 0;
+			}else{
+				contador = 1;
+				$('nav').addClass("header_nav");
+				$('nav').removeClass("header_nav_click");
+				$('#menu_barr_id').addClass("menu_barr2");
+				$('#menu_barr_id').removeClass("menu_barr_click");
+			}
+		})
+	}
+
+		// $('#menu')
+		// 	.append('<a href="#menu" class="close"></a>')
+		// 	.appendTo($body)
+		// 	.panel({
+		// 		delay: 500,
+		// 		hideOnClick: true,
+		// 		hideOnSwipe: true,
+		// 		resetScroll: true,
+		// 		resetForms: true,
+		// 		side: 'right',
+		// 		target: $body,
+		// 		visibleClass: 'is-menu-visible'
+		// 	});
+		$(function (){
+			$(window).scroll(function(){
+				if ($(this).scrollTop() > 700){
+					$('#header').addClass("azul");
+					$('#header').removeClass("alt");
+				}else{
+					$('#header').removeClass("azul");
+					$('#header').addClass("alt");
+				}
 			});
+		})
 
 	// Header.
 		if ($banner.length > 0
