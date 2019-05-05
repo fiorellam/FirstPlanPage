@@ -2576,11 +2576,13 @@ input, select, textarea {
 			}
 
 			.features li:nth-child(7) {
-				background-color: rgba(0, 0, 0, 0.245);
+				background-color: #8CCB3F ;
+				/* background-color: rgba(0, 0, 0, 0.245); */
 			}
 
 			.features li:nth-child(8) {
-				background-color: rgba(0, 0, 0, 0.28);
+				background-color: #9D9D9C ;
+				/* background-color: rgba(0, 0, 0, 0.28); */
 			}
 
 			.features li:nth-child(9) {
