@@ -4075,3 +4075,9 @@ input, select, textarea {
 		background: transparent !important;
 	}
 }
+.wrapper.style3 h3 {
+	color: black;
+}
+.wrapper.style3 {
+    color: black;
+}
