@@ -32,6 +32,7 @@
 	// Mobile?
 		if (browser.mobile)
 			$body.addClass('is-mobile');
+			
 		else {
 
 			breakpoints.on('>medium', function() {
@@ -52,6 +53,29 @@
 			});
 
 	// Menu.
+	$(document).ready(main);
+
+	var contador = 1;
+
+	function main(){
+		$('#menu_barr_id').click(function (){
+			console.log("que tranzuki por tus venukis");
+			if(contador == 1){
+				$('nav').removeClass("header_nav");
+				$('nav').addClass("header_nav_click");
+				$('#menu_barr_id').removeClass("menu_barr2");
+				$('#menu_barr_id').addClass("menu_barr_click");
+				contador = 0;
+			}else{
+				contador = 1;
+				$('nav').addClass("header_nav");
+				$('nav').removeClass("header_nav_click");
+				$('#menu_barr_id').addClass("menu_barr2");
+				$('#menu_barr_id').removeClass("menu_barr_click");
+			}
+		})
+	}
+
 		// $('#menu')
 		// 	.append('<a href="#menu" class="close"></a>')
 		// 	.appendTo($body)
